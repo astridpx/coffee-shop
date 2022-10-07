@@ -1,0 +1,185 @@
+.footer-container {
+  height: max-content;
+  width: 100%;
+  /* background-color: #e0b986; */
+  background-color: #a08562;
+}
+.footer-wrapper {
+  padding: 1rem 0;
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
+}
+
+.footer-wrapper h3 {
+  color: #3f2402;
+  cursor: pointer;
+}
+.footer-wrapper p,
+.footer-wrapper label {
+  cursor: pointer;
+  color: #f3f0eb;
+}
+.footer-wrapper .contact {
+  line-height: 2.5rem;
+  padding-right: 1.5rem;
+}
+.contact .adress {
+  display: flex;
+  line-height: 2.5rem;
+}
+.contact .adress label {
+  padding-right: 5px;
+}
+.contact .soc-med {
+  margin-top: 1rem;
+  width: 80%;
+  /* background-color: aqua; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.soc-med .icon {
+  font-size: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+.soc-med .icon:nth-child(1) {
+  background-color: #f1f1f1;
+  color: #175e9c;
+}
+.soc-med .icon:nth-child(2) {
+  background-color: #00acee;
+  color: #f1f1f1;
+  padding: 0.3rem;
+}
+.soc-med .icon:nth-child(3) {
+  color: #db4a39;
+  background-color: #f1f1f1;
+}
+.soc-med .icon:nth-child(4) {
+  color: #e60023;
+  background-color: #f1f1f1;
+}
+.soc-med .icon:nth-child(5) {
+  background-color: #ff0000;
+  color: #f1f1f1;
+  padding: 0.3rem;
+}
+.contact .contact-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 6rem;
+}
+
+.footer-wrapper .information {
+  line-height: 2.5rem;
+}
+.footer-wrapper .account {
+  line-height: 2.5rem;
+}
+.footer-wrapper .newsletter {
+  line-height: 2.5rem;
+}
+.newsletter .subscribe {
+  /* background-color: #db4a39; */
+  height: max-content;
+  margin-top: 2rem;
+}
+.subscribe p {
+  /* color: #3f2402; */
+  color: #000000;
+  font-weight: 600;
+}
+.subscribe input {
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid #f1f1f1;
+  background-color: transparent;
+  cursor: pointer;
+}
+.subscribe input:focus {
+  outline: none;
+}
+.subscribe button {
+  /* margin-top: 1rem; */
+  width: 35%;
+  color: #f1f1f1;
+  height: 2.5rem;
+  background-color: #1a1a1a;
+  border-radius: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+.subscribe button:hover {
+  transform: scale(1.1, 1.1);
+}
+.account,
+.newsletter {
+  margin-top: 1rem;
+}
+.bottom-footer {
+  /* background-color: #3f2402; */
+  width: 90%;
+  padding: 0 0 0.5rem 0;
+  height: max-content;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+.bottom-footer h5 {
+  cursor: pointer;
+}
+
+.bottom-footer .credit-cards {
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-footer .credit-cards img {
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+/* android */
+@media only screen and (max-width: 864px) {
+  /* .footer-container {
+    height: max-content;
+  } */
+  .footer-wrapper {
+    display: block;
+    padding-right: 4rem;
+    width: 100%;
+    padding-left: 5px;
+  }
+  .contact .soc-med {
+    width: 55%;
+    /* width: fit-content; */
+    /* background-color: #00acee; */
+  }
+  .contact .contact-bottom {
+    height: 4rem;
+    margin-bottom: 1rem;
+  }
+  .newsletter {
+    padding-right: 4rem;
+  }
+  .bottom-footer {
+    display: block;
+    line-height: 2rem;
+    width: 100%;
+    padding-left: 5px;
+  }
+  .bottom-footer .credit-cards {
+    padding-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+  }
+}
