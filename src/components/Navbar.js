@@ -9,6 +9,7 @@ const Navbar = () => {
 
   const toggleNavbar = () => {
     setOpenLinks(!openLinks);
+    document.body.style.overflow = "hidden";
   };
 
   return (
@@ -27,7 +28,10 @@ const Navbar = () => {
             <div
               className="hidden-overlay"
               id={openLinks ? "open" : "close"}
-              onClick={toggleNavbar}
+              onClick={(toggleNavbar) => {
+                document.body.style.overflow = "";
+                setOpenLinks(!openLinks);
+              }}
             >
               <div className="hidden-links">
                 <div className="contact-me">
