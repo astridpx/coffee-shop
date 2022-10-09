@@ -34,11 +34,19 @@ import Logo6 from "../assets/images/brand-logo6.png";
 
 // product
 import { Products } from "../data/Products";
+import Default from "../helpers/DefaultProduct";
+import FilterLatest from "../helpers/LatestProduct";
+import FilterBestSeller from "../helpers/BestSellerProduct";
 
 function MenuGallery() {
   const [isHovering, setHovering] = useState(false);
   const [isHovering2, setHovering2] = useState(false);
   const [isHovering3, setHovering3] = useState(false);
+
+  const [showProducts, setProducts] = useState();
+  const [btnFeatured, setbtnFeatured] = useState("active");
+  const [btnLatest, setbtnLatest] = useState("");
+  const [btnBest, setbtnBest] = useState("");
 
   const imgHover = () => {
     setHovering(!isHovering);
@@ -59,45 +67,6 @@ function MenuGallery() {
   };
   const imgUnHover3 = () => {
     setHovering3(false);
-  };
-
-  // Featured Products
-  const FeauturedDisplay = Products.map((prod) => {
-    return (
-      <div className="prod-card" key={prod.id}>
-        <div className="imgProd">
-          <img src={prod.img} />
-        </div>
-        <div className="prod-info">
-          <div className="upper-info">
-            <p>{prod.rate}</p>
-            <h4>{prod.title}</h4>
-          </div>
-          <div className="bottom-info">
-            <button>
-              <RiShoppingBasketLine id="basket" />
-            </button>
-            <p>{prod.price}</p>
-          </div>
-        </div>
-      </div>
-    );
-  });
-
-  const [showFeatured, setFeatured] = useState(false);
-  const [showLatest, setLatest] = useState(false);
-  const [showBest, setBest] = useState(false);
-
-  const displayFeatured = () => {
-    console.log("Featured");
-  };
-
-  const displayLatest = (e) => {
-    console.log("Latest");
-  };
-
-  const displayBestSeller = () => {
-    console.log("BestSeller");
   };
 
   return (
@@ -209,37 +178,55 @@ function MenuGallery() {
         <div className="top-products-wrapper">
           <h2 className="productText">Top Products</h2>
           <div className="btns">
-            <button onClick={displayFeatured} id="active">
+            <button
+              onClick={(displayProducts) => {
+                setProducts(Default);
+
+                const btnId = "active";
+
+                setbtnFeatured(btnId);
+                setbtnLatest(null);
+                setbtnBest(null);
+              }}
+              id={btnFeatured}
+            >
               Featured
             </button>
-            <button onClick={displayLatest}>Latest</button>
-            <button onClick={displayBestSeller}>Bestseller</button>
+            <button
+              onClick={(displayProducts) => {
+                setProducts(FilterLatest);
+
+                const btnId = "active";
+
+                setbtnLatest(btnId);
+                setbtnFeatured(null);
+                setbtnBest(null);
+              }}
+              id={btnLatest}
+            >
+              Latest
+            </button>
+            <button
+              onClick={(displayProducts) => {
+                setProducts(FilterBestSeller);
+
+                const btnId = "active";
+
+                setbtnBest(btnId);
+                setbtnLatest(null);
+                setbtnFeatured(null);
+              }}
+              id={btnBest}
+            >
+              Bestseller
+            </button>
           </div>
           <div className="prod-display">
-            {FeauturedDisplay}
-            {/* start of product card */}
-            {/* <div className="prod-card">
-              <div className="imgProd">
-                <img src={Prod} />
-              </div>
-              <div className="prod-info">
-                <div className="upper-info">
-                  <p>★★★★★</p>
-                  <h4>Irish Coffee</h4>
-                </div>
-                <div className="bottom-info">
-                  <button>
-                    <RiShoppingBasketLine id="basket" />
-                  </button>
-                  <p>$98.00</p>
-                </div>
-              </div>
-              </div> */}
-
-            {/* end of product card */}
-            {/* <DisplayProduct /> */}
+            {/* display the products */}
+            {showProducts || Default}
           </div>
         </div>
+
         {/* Coffee GAllery Images */}
         <div className="gallery">
           <div className="gallery-wrapper">

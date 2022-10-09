@@ -15,8 +15,8 @@ function App() {
         <Head />
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/" exact component={<Home />} />
+          <Route path="/contact" component={<Contact />} />
         </Routes>
         <Footer />
       </Router>
