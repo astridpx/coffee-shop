@@ -35,18 +35,20 @@ const Navbar = () => {
             >
               <div className="hidden-links">
                 <div className="contact-me">
-                  <img src={Headset} />
+                  <img src={Headset} id="hidden-img" />
                   <div className="contact">
                     <h4>Jerome Sy</h4>
                     <h5>63-997-611</h5>
                   </div>
                 </div>
                 <div className="line"></div>
-                <Link to="/">Home</Link>
-                <Link to="/">About US</Link>
-                <Link to="/">Services</Link>
-                <Link to="/">Portfolio</Link>
-                <Link to="/contact">Contact Us</Link>
+                <div className="hidden-nav-link">
+                  <Link to="/">Home</Link>
+                  <Link to="/">Services</Link>
+                  <Link to="/">About US</Link>
+                  <Link to="/">Portfolio</Link>
+                  <Link to="/contact">Contact Us</Link>
+                </div>
               </div>
             </div>
             <div className="menu" onClick={toggleNavbar}>
