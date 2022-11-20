@@ -540,12 +540,14 @@ html body {
     justify-content: center;
   }
   .prod-display {
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, 46%);
+    gap: 1rem;
+    place-content: space-between;
   }
   .prod-card {
-    width: 83%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
   }
 
   .upper-info h4 {
@@ -562,12 +564,14 @@ html body {
     width: 45%;
   }
   .blog-card-wrap {
-    grid-template-columns: repeat(1, 0.8fr);
+    grid-template-columns: repeat(1, 1fr);
+    place-content: center;
   }
-  .blog-card-wrap .blog-card {
-    margin-left: 15%;
-    /* margin-right: 20%; */
-  }
+  /* .blog-card-wrap .blog-card { */
+  /* margin-left: 15%; */
+  /* margin: 0 auto; */
+  /* margin-right: 20%; */
+  /* } */
   .logos-wrapper .logos-img-wrap {
     justify-content: center;
   }

@@ -15,12 +15,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: inherit;
+  height: 100%;
   width: 100%;
   flex-direction: column;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
   padding-bottom: 10%;
-  position: absolute;
+  /* position: absolute; */
 }
 
 .text p {
@@ -49,10 +49,10 @@
   color: black;
 }
 
-@media only screen and (max-width: 864px) {
+/* @media only screen and (max-width: 864px) {
   .text p,
   .text button,
   .text h1 {
-    transform: translateY(-5.5rem);
-  }
-}
+    /* transform: translateY(-5.5rem); */
+/* } */
+/* } */

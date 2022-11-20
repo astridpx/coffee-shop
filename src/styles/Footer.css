@@ -99,6 +99,7 @@
 .subscribe input {
   width: 80%;
   border: none;
+  padding: 2px 4px;
   border-bottom: 1px solid #f1f1f1;
   background-color: transparent;
   cursor: pointer;
@@ -106,11 +107,17 @@
 .subscribe input:focus {
   outline: none;
 }
+.subscribe input::placeholder {
+  color: #f1f1f1;
+  opacity: 0.5;
+}
+
 .subscribe button {
   /* margin-top: 1rem; */
   width: 35%;
   color: #f1f1f1;
-  height: 2.5rem;
+  /* height: 2.5rem; */
+  padding: 10px 15px;
   background-color: #1a1a1a;
   border-radius: 1.5rem;
   font-weight: 600;
@@ -156,7 +163,7 @@
     display: block;
     padding-right: 4rem;
     width: 100%;
-    padding-left: 5px;
+    padding-left: 1rem;
   }
   .contact .soc-med {
     width: 55%;
@@ -174,12 +181,12 @@
     display: block;
     line-height: 2rem;
     width: 100%;
-    padding-left: 5px;
+    padding: 0 1rem;
   }
   .bottom-footer .credit-cards {
     padding-top: 0.5rem;
     display: flex;
     flex-wrap: wrap;
-    width: 50%;
+    /* width: 50%; */
   }
 }
