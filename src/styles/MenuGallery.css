@@ -115,11 +115,11 @@ html body {
   align-items: center;
   justify-content: space-between;
   padding: 3.5rem 0;
-  transform: translateY(-5px);
+  /* transform: translateY(-5px); */
   transition: 0.3s ease-in;
 }
 #showOverlay {
-  bottom: 0;
+  bottom: 9px;
 }
 #hideOverlay {
   bottom: -100%;
