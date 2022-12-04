@@ -10,6 +10,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
+  max-width: 1400px;
 }
 
 .footer-wrapper h3 {
@@ -148,10 +149,13 @@
 .bottom-footer .credit-cards {
   display: flex;
   justify-content: space-between;
+  max-width: 400px;
 }
 .bottom-footer .credit-cards img {
   height: 2.5rem;
   cursor: pointer;
+  aspect-ratio: 3/2;
+  object-fit: contain;
 }
 
 /* android */

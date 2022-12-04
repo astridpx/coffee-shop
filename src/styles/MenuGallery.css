@@ -9,6 +9,7 @@ html body {
   background-color: #f1e7d9;
 }
 .wrapper .service-wrapper {
+  max-width: 1400px;
   height: max-content;
   width: 90%;
   /* background-color: aquamarine; */
@@ -85,6 +86,8 @@ html body {
 
 .top-categories .categories-img-wrapper {
   display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
@@ -183,6 +186,8 @@ html body {
   /* display: flex;
   justify-content: space-between;
   flex-wrap: wrap; */
+  max-width: 1400px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(5, 14rem);
   grid-auto-rows: max-content;
@@ -304,6 +309,7 @@ html body {
 /* Special Products */
 .special-prod-wrapper {
   height: max-content;
+  max-width: 1400px;
   width: 90%;
   margin: 0 auto;
 }
@@ -422,6 +428,7 @@ html body {
   height: max-content;
   width: 90%;
   margin: 0 auto;
+  max-width: 1400px;
   /* padding-bottom: 2rem; */
 }
 .blog-wrapper h2 {
@@ -497,6 +504,7 @@ html body {
 .logos-wrapper {
   height: max-content;
   width: 90%;
+  max-width: 1400px;
   margin: 0 auto;
   padding-top: 2rem;
   padding-bottom: 2rem;
